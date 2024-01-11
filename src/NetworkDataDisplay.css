@@ -1,0 +1,67 @@
+/* Main styling for each network data row */
+.network-data-row {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Styling for the network name */
+.network-name {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styling for data details section */
+.data-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Balance and percentage change styling */
+.balance-info, .change-percent {
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Positive change - pulse animation */
+.positive {
+    color: #4CAF50;
+}
+
+/* Negative change - shake animation */
+.negative {
+    color: #F44336;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+/* Alert message styling */
+.alert-message {
+    padding: 10px;
+    background-color: #ffcccb;
+    color: #d8000c;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* Shake animation for negative change */
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
