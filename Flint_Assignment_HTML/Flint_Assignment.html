@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Balance Checker</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blockchain Balance Checker</h1>
+    <label for="network-select">Choose a network:</label>
+    <select id="network-select">
+        <option value="Mantle">Mantle</option>
+        <option value="Linea">Linea</option>
+        <option value="Kroma">Kroma</option>
+    </select>
+    <input type="text" id="address-input" placeholder="Enter Address Here" />
+    <button onclick="getNativeTokenBalance()">Check Balance</button>
+    <div id="balance">Balance will be displayed here...</div>
+    <div id="change">Change will be displayed here...</div>
+    <script src="script.js"></script>
+</body>
+</html>

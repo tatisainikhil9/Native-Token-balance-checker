@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+input, select, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+button:hover {
+    background-color: #45a049;
+}
