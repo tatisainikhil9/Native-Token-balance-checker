@@ -7,7 +7,7 @@ If the balance reduces by 10% in the last 12 hours, the user should be notified 
 ## How to Run
 
 ### HTML front end application
-- Just open the Flint_Assignment.html file.
+- Just open the Flint_Assignment.html file in the Flint_Assignment_HTML folder.
 - You need to choose a network and input the externally owned address for which you want to fetch balance and calculate the percentage change past 12 hours.
 - After clicking the button you will be shown the balance and percentage change. 
 
