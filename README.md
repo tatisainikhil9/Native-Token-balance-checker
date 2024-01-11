@@ -1,70 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Native Token Balance Checker
+This repository consist of two front end application which fetches the native token balance of an externally owned account. (example : Ethereum is the native token on Ethereum blockchain).
+Along with the native token balance of the account, also fetch and display the percentage change in balance in the last 12 hours.
+If the balance reduces by 10% in the last 12 hours, the user should be notified with an alert on the application.
 
-## Available Scripts
+## How to Run
 
-In the project directory, you can run:
+### HTML front end application
+- Just open the Flint_Assignment.html file.
+- You need to choose a network and input the externally owned address for which you want to fetch balance and calculate the percentage change past 12 hours.
+- After clicking the button you will be shown the balance and percentage change. 
 
-### `npm start`
+### React App (Follow these steps)
+#### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js and npm installed on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Steps
 
-### `npm test`
+1. Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory
 
-### `npm run build`
+   ``` cd Native-Token-balance-checker ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
+```npm install``` and ```npm install ethers ethers-react```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the application:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```npm start``` 
 
-### `npm run eject`
+   The app will be accessible at [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Code Overview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `src/App.js`
+Main App Component which launches a component for each Network
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `src/NetworkDataDisplay.js`
+This component displays information about a network, such as its balance and percentage change. It utilizes Ethereum's JSON-RPC provider to fetch data, calculate the balance change, and set up automatic updates at specified intervals. The component also generates an alert message if the balance decreases by more than 10% in the last 12 hours. It includes sub-components for displaying the network name, balance, percentage change, and alert message. The data is fetched and updated asynchronously to provide real-time information, making it suitable for monitoring Ethereum networks in a web application.
